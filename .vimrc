@@ -15,6 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
@@ -23,6 +24,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'leafOfTree/vim-vue-plugin'
 
 " Choose languages
 Plugin 'pangloss/vim-javascript'
@@ -34,6 +36,12 @@ Plugin 'elzr/vim-json'
 call vundle#end()
 
 filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 " NERDTree
 map <C-K> :NERDTreeToggle<CR>
@@ -53,3 +61,7 @@ set numberwidth=4
 
 set background=dark
 colorscheme hybrid
+
+set backupdir=.backup/,~/.backup/,/tmp//
+set directory=.swp/,~/.swp/,/tmp//
+set undodir=.undo/,~/.undo/,/tmp//
