@@ -25,6 +25,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'leafOfTree/vim-vue-plugin'
+Plugin 'arnaud-lb/vim-php-namespace'
 
 " Choose languages
 Plugin 'pangloss/vim-javascript'
@@ -55,12 +56,16 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+" php-namespaces
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+
 " Display line numbers
 set number
 set numberwidth=4
 
 set background=dark
-colorscheme hybrid
+colorscheme hybrid_material "hybrid
 
 set backupdir=.backup/,~/.backup/,/tmp//
 set directory=.swp/,~/.swp/,/tmp//
