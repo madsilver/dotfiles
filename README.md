@@ -1,3 +1,1 @@
 # Dotfiles
-
-My ubuntu dotfiles
